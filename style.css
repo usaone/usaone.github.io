@@ -1,3 +1,44 @@
-Selector {
+/*Selector {
     Property: value;
+}*/
+
+* {
+    text-align: right;
 }
+
+body {
+    background-image: url(images/tobias-kebernik-765183-unsplash.jpg);
+    background-size: cover;
+}
+
+h2, p {
+    color: rgb(17, 15, 163);
+    text-align: center;
+    border: 5px solid rgba(255, 176, 170, 0.8);
+    cursor: pointer;
+}
+
+p {
+    color: green;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+.webtext:first-child {
+    border: 5px dashed blue;
+}
+
+.active {
+    color: red;
+}
+
+#div1 {
+   background: lightblue; 
+}
+
+#div2 {
+    background: rgba(255,0,0,0.4); 
+ }
