@@ -1,60 +1,37 @@
-/*Selector {
-    Property: value;
-}*/
-
-* {
-    text-align: right;
-}
-
 body {
-    background-image: url(images/tobias-kebernik-765183-unsplash.jpg);
-    background-size: cover;
+    margin: 0px;
 }
 
-h2 {
-    color: rgb(17, 15, 163);
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    font-family: Fantasy;
+    font-size: 3em;
+    border-bottom: 2px solid pink;
+    border-right: 2px solid pink;
+    width: 400px;
     text-align: center;
-    border: 5px solid rgba(255, 176, 170, 0.8);
-    cursor: pointer;
-}
-
-p {
-    color: rgb(25, 28, 228);
-    line-height: 20px;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 140%;
-    font-family: 'Poiret One', cursive;
-    background-color: rgba(220,220,220,0.6)
+    -moz-box-shadow: 4px 4px 5px #888888;
+    -ms-box-shadow: 4px 4px 5px #888888;
+    -webkit-box-shadow: 4px 4px 5px #888888;
+    -o-box-shadow: 4px 4px 5px #888888;
+    box-shadow: 4px 4px 5px #888888;
+    margin-top: 10px;
 }
 
 img {
-    float: left;
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid pink;
+    transition: all 0.2s;
 }
 
-footer {
-    color: greenyellow;
-    clear: both;
-    text-align: center;
+img:hover {
+    transform: scale(1.1);
 }
-
-li {
-    list-style: none;
-    display: inline-block;
-}
-
-.webtext:first-child {
-    border: 5px dashed blue;
-}
-
-.active {
-    color: red;
-}
-
-#div1 {
-   background: lightblue; 
-}
-
-#div2 {
-    background: rgba(255,0,0,0.4); 
- }
