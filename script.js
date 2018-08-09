@@ -8,11 +8,17 @@ var database = [
 var newsFeed = [
     {
         username: "Bobby",
-        timeline: "So tired from all that learning!"
+        timeline: "So tired from all that learning!",
+        popup: function() {
+            alert(this.username + ": " + this.timeline)
+        }
     },
     {
         username: "Sally",
-        timeline: "Javascript is sooooo coool!"
+        timeline: "Javascript is sooooo coool!",
+        popup: function() {
+            alert(this.username + ": " + this.timeline)
+        }
     }
 ];
 
@@ -22,7 +28,8 @@ var passwordPrompt = prompt("What is your password?");
 function signIn(user, pass) {
     if (database[0].username === user && database[0].password === pass)
     {
-        console.log(newsFeed);
+        console.log(newsFeed[0].popup());
+        console.log(newsFeed[1].popup());
     }
     else
     {
