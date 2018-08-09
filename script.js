@@ -10,9 +10,11 @@ for (var i=0; i < todos.length; i++) {
     console.log(todos[i]);
 }
 
-todos.forEach(function(todo, i) {
+function logTodos(todo, i) {
     console.log(todo, i);
-});
+}
+
+todos.forEach(logTodos);
 
 var counterWhile = 0;
 while (counterWhile < 10) {
