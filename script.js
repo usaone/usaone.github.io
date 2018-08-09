@@ -1,40 +1,28 @@
-var database = [
-    {
-        username: "andrei",
-        password: "super"
-    }
+var todos = [
+    "clean room",
+    "brush teeth",
+    "exercise",
+    "study javascript",
+    "eat healthy"
 ];
 
-var newsFeed = [
-    {
-        username: "Bobby",
-        timeline: "So tired from all that learning!",
-        popup: function() {
-            alert(this.username + ": " + this.timeline)
-        }
-    },
-    {
-        username: "Sally",
-        timeline: "Javascript is sooooo coool!",
-        popup: function() {
-            alert(this.username + ": " + this.timeline)
-        }
-    }
-];
-
-var userNamePrompt = prompt("What is your username?");
-var passwordPrompt = prompt("What is your password?");
-
-function signIn(user, pass) {
-    if (database[0].username === user && database[0].password === pass)
-    {
-        console.log(newsFeed[0].popup());
-        console.log(newsFeed[1].popup());
-    }
-    else
-    {
-        alert("Sorry, unknown username or password!");
-    }
+for (var i=0; i < todos.length; i++) {
+    console.log(todos[i]);
 }
 
-signIn(userNamePrompt, passwordPrompt);
+todos.forEach(function(todo, i) {
+    console.log(todo, i);
+});
+
+var counterWhile = 0;
+while (counterWhile < 10) {
+    console.log(counterWhile);
+    counterWhile++;
+}
+
+var counterDo = 10;
+do {
+    console.log(counterDo);
+    counterDo--;
+} while (counterDo > 0);
+
