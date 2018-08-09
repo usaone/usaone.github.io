@@ -14,7 +14,7 @@ function logTodos(todo, i) {
     console.log(todo, i);
 }
 
-todos.forEach(logTodos);
+todos.forEach(logTodos); //refer to CanIuse.com to see if this feature is available in all browsers or only specific browsers.
 
 var counterWhile = 0;
 while (counterWhile < 10) {
