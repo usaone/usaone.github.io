@@ -1,17 +1,31 @@
-// Destructuring
+// Object properties - New way of declaring
+
+const name = 'john snow';
 
 const obj = {
-    player: 'bobby',
-    experience: 100,
-    wizardLevel: false
+    [name]: 'hello', //the property name comes from above declaration
+    ['ray' + 'smith']: 'hihi' //dynamically declared property name
 }
 
-// Known way to assign
-const player = obj.player;
-const experience = obj.experience;
-let wizardLevel = obj.wizardLevel;
+// Additionally, if we have three declarations as below
+const a = "Simon";
+const b = true;
+const c = {};
 
-// Additional destructured way to assign
-const {player, experience} = obj;
-let {wizardLevel} = obj;
+// and we need to declare an object as follows
+// with the property name same as the variable name
+const obj1 = {
+    a: a,
+    b: b,
+    c: c
+}
 
+// then we can declare the above in the following way
+const obj2 = {
+    a,
+    b,
+    c
+}
+
+console.log('Using explicit assignment', obj1);
+console.log('New way', obj2);
