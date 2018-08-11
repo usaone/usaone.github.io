@@ -1,31 +1,10 @@
-// Object properties - New way of declaring
+// Temmplate strings
 
-const name = 'john snow';
+const name = "Sally";
+const age = 34;
+const pet = "horse";
 
-const obj = {
-    [name]: 'hello', //the property name comes from above declaration
-    ['ray' + 'smith']: 'hihi' //dynamically declared property name
-}
-
-// Additionally, if we have three declarations as below
-const a = "Simon";
-const b = true;
-const c = {};
-
-// and we need to declare an object as follows
-// with the property name same as the variable name
-const obj1 = {
-    a: a,
-    b: b,
-    c: c
-}
-
-// then we can declare the above in the following way
-const obj2 = {
-    a,
-    b,
-    c
-}
-
-console.log('Using explicit assignment', obj1);
-console.log('New way', obj2);
+// Usually to construct a string we do
+const greeting = "Hello " + name + " you seem to be " + (age-10) + "!";
+// Now we can do using something called Template Strings having back-ticks` 
+const greetingBest = `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have`; 
