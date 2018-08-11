@@ -17,6 +17,7 @@ newFunc();
 // scope always has access to. The function second() has access
 // to the const greet in function first() which is the parent.
 
+//------------------------------------------------------------//
 // Currying
 // Take for example, the next line
 const multiply = (a, b) => a * b;
@@ -35,3 +36,15 @@ multiplyBy9(10);
 //>> will give us 90
 multiplyBy9(9);
 //>> will give us 81
+
+//------------------------------------------------------------//
+// Compose
+// Take for example the following
+const compose = (f, g) => (a) => f(g(a));
+
+// Let start
+const sum = (num) => num + 1;
+// Then
+compose(sum, sum)(5);
+// This should return sum(sum(5)), which is sum(6), which is 7.
+
