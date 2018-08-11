@@ -1,17 +1,11 @@
-// Temmplate strings
+// Symbol - Creates uniqueness even with same values used in declaration
 
-const name = "Sally";
-const age = 34;
-const pet = "horse";
+let sym1 = Symbol();
+let sym2 = Symbol('foo');
+let sym3 = Symbol('foo');
 
-// Usually to construct a string we do
-// const greeting = "Hello " + name + " you seem to be " + (age-10) + "!";
-// Now we can do using something called Template Strings having back-ticks` 
-// const greetingBest = `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have`; 
+console.log('sym1',sym1);
+console.log('sym2',sym2);
+console.log('sym3',sym3);
 
-// Default arguments
-function greet(name='', age=30, pet='cat') {
-    return `Hello ${name} you seem to be ${age-10}. What a lovely ${pet} you have`;
-}
-
-console.log(greet(name));
+console.log('compare: sym2 === sym3', sym2 === sym3)
