@@ -1,16 +1,11 @@
-// Arrow functions
-
-// Previouls to add we would do the following
-function add(a, b) {
-    return a + b;
+// Old way
+function first() {
+    var greet = 'Hi';
+    function second() {
+        alert(greet);
+    }
+    return second;
 }
 
-// Now with arrow functions (similar to lambda expressions)
-const add = (a, b) => a + b;
-// "add = (a, b) =>" means the same as "function add(a, b)"
-
-const add = (a, b) => { 
-    return a + b;
-}
-
-// All the declarations mean the same thing
+var newFunc = first();
+newFunc();
