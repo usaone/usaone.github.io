@@ -1,11 +1,16 @@
-// Symbol - Creates uniqueness even with same values used in declaration
+// Arrow functions
 
-let sym1 = Symbol();
-let sym2 = Symbol('foo');
-let sym3 = Symbol('foo');
+// Previouls to add we would do the following
+function add(a, b) {
+    return a + b;
+}
 
-console.log('sym1',sym1);
-console.log('sym2',sym2);
-console.log('sym3',sym3);
+// Now with arrow functions (similar to lambda expressions)
+const add = (a, b) => a + b;
+// "add = (a, b) =>" means the same as "function add(a, b)"
 
-console.log('compare: sym2 === sym3', sym2 === sym3)
+const add = (a, b) => { 
+    return a + b;
+}
+
+// All the declarations mean the same thing
