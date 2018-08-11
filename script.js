@@ -1,15 +1,17 @@
-// let + const
+// Destructuring
 
-const player = "bobby";
-let experience = 100;
-let wizardLevel = false;
-
-if (experience > 90) {
-    let wizardLevel = true;
-    console.log('inside', wizardLevel);
+const obj = {
+    player: 'bobby',
+    experience: 100,
+    wizardLevel: false
 }
 
-console.log('outside', wizardLevel);
+// Known way to assign
+const player = obj.player;
+const experience = obj.experience;
+let wizardLevel = obj.wizardLevel;
 
-player = "Test";
-console.log
+// Additional destructured way to assign
+const {player, experience} = obj;
+let {wizardLevel} = obj;
+
