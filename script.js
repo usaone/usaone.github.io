@@ -1,11 +1,11 @@
-// Old way
-function first() {
-    var greet = 'Hi';
-    function second() {
-        alert(greet);
-    }
+// New way
+const first = () => {
+    const greet = 'Hi';
+    const second = () => alert(greet);
     return second;
 }
 
-var newFunc = first();
+
+
+let newFunc = first();
 newFunc();
