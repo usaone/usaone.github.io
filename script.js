@@ -48,3 +48,10 @@ const sum = (num) => num + 1;
 compose(sum, sum)(5);
 // This should return sum(sum(5)), which is sum(6), which is 7.
 
+//------------------------------------------------------------//
+// Avoiding Side Effects, Functional Purity
+// A function should have no side effects and should always return a value.
+// A side effect is something outside of the function scope getting modified.
+// Also, to maintain functional purity, the function should be deterministic,
+// which means, it should return the same value as the result at any time
+// for a given input.
