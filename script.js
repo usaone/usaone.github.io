@@ -1,7 +1,8 @@
-// New functions introduced in ES8 in 2017
-//.padStart()
-//.padEnd()
+const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+    (a, b) => a.concat(b), []);
 
-let name = 'Turtle';
-name.padStart();
-name.padEnd();
+const flatten = [[0,1], [2, 3], [4, 5]].reduce(
+    (accumulator, obj) => {
+        debugger;
+        return accumulator.concat(obj);
+    }, []);
