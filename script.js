@@ -1,57 +1,39 @@
-// New way
-const first = () => {
-    const greet = 'Hi';
-    const second = () => alert(greet);
-    return second;
-}
+// Advanced Arrays
 
+// Let's take an array
+const array = [1, 2, 10, 16];
 
+// In the old way we would do
+const double = [];
+array.forEach((num) => {
+    double.push(num * 2);
+});
 
-let newFunc = first();
-newFunc();
+console.log('forEach', double);
 
+// map, or filter, or reduce can be used to do it better
 
-// Closures - a function ran. The function executed. It's never 
-// going to execute again, BUT, it's going to remember that there
-// are references to variables in the parent scope that the child 
-// scope always has access to. The function second() has access
-// to the const greet in function first() which is the parent.
+// Using map
+const mapArray = array.map((num) => {
+    return num * 2;
+});
 
-//------------------------------------------------------------//
-// Currying
-// Take for example, the next line
-const multiply = (a, b) => a * b;
+// the above can be written as
+const mapArray1 = array.map(num => num * 2);
 
-// Now write it as:
-const curriedMultiply = (a) => (b) => a * b;
+console.log('map', mapArray1);
 
-// This simply means
-curriedMultiply(3) = (b) => 3 * b;
-// Which means
-curriedMultiply(3)(4) = 12;
-// We can declare const as follows
-const multiplyBy9 = curriedMultiply(9);
-// Which will let us do
-multiplyBy9(10);
-//>> will give us 90
-multiplyBy9(9);
-//>> will give us 81
+// Using filter
+const filterArray = array.filter(num => num > 5);
+const filterArray1 = array.filter(num => num === 5);
 
-//------------------------------------------------------------//
-// Compose
-// Take for example the following
-const compose = (f, g) => (a) => f(g(a));
+console.log('filter', filterArray);
+console.log('filter', filterArray1);
 
-// Let start
-const sum = (num) => num + 1;
-// Then
-compose(sum, sum)(5);
-// This should return sum(sum(5)), which is sum(6), which is 7.
+// Using reduce
 
-//------------------------------------------------------------//
-// Avoiding Side Effects, Functional Purity
-// A function should have no side effects and should always return a value.
-// A side effect is something outside of the function scope getting modified.
-// Also, to maintain functional purity, the function should be deterministic,
-// which means, it should return the same value as the result at any time
-// for a given input.
+const reduceArray = array.reduce((accumulator, num) => {
+    return accumulator * num;
+}, 1);
+
+console.log('reduce', reduceArray); //returns 320 for the above
