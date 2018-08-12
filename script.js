@@ -1,8 +1,12 @@
-const flattened = [[0, 1], [2, 3], [4, 5]].reduce(
-    (a, b) => a.concat(b), []);
+// Demonstrating how Javascript works and how it handles long running tasks
+console.log('1');
+setTimeout(() => {
+    console.log('2');
+}, 2000);
+console.log('3');
 
-const flatten = [[0,1], [2, 3], [4, 5]].reduce(
-    (accumulator, obj) => {
-        debugger;
-        return accumulator.concat(obj);
-    }, []);
+// Run the above in the Console and you will see
+// 1
+// 3
+// afer a while...
+// 2
