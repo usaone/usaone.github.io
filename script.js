@@ -1,22 +1,4 @@
-let ex = 0;
+var _ = require('lodash');
 
-function mix() {
-    let t = 1;
-    function flap() {
-        var isit = 0;
-        isit = function () {
-            return 1;
-        }
-        if (isit > 0) {
-            return 1;
-        } else {
-            return 0;
-        }
-    }
-    let x = flap();
-    return t + x;
-}
-
-ex = mix();
-
-console.log(ex);
+console.log(_);
+console.log(_);
