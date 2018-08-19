@@ -40,3 +40,16 @@ cleanRoom().then(function(result) {
 .then(function(result){
   console.log('Done! I ' + result);
 });
+
+// If you want to do all three and then after
+// completion of all, do something else, then
+// you would do
+Promise.all([cleanRoom(), removeGarbage(), winIcecream()])
+.then(function() {
+  console.log('All done');
+});
+
+Promise.race([cleanRoom(), removeGarbage(), winIcecream()])
+.then(function() {
+  console.log('One done! Two more to go.');
+});
