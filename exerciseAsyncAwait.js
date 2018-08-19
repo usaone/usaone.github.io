@@ -7,7 +7,7 @@ fetch('https://swapi.co/api/starships/9/')
 
 async function fetchIems() {
   const response = await fetch('https://swapi.co/api/starships/9/');
-  const data = await (response => response.json());
+  const data = await response.json();
   console.log(data);
 }
 fetchIems();
@@ -30,6 +30,7 @@ const getData = async function() {
   console.log('posta', posts);
   console.log('albums', albums);
 }
+
 
 // #3) Add a try catch block to the #2 solution in order to catch any errors.
 // Now chnage one of the urls so you console.log your error with 'ooooooops'
