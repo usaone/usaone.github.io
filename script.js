@@ -7,19 +7,19 @@
 
 let cleanRoom = function() {
   return new Promise(function(resolve, reject){
-    resolve('Cleaned The Room');
+    resolve('cleaned the room');
   });
 };
 
-let removeGarbage = function(p) {
+let removeGarbage = function(message) {
   return new Promise(function(resolve, reject){
-    resolve('Removed Garbage');
+    resolve(message + ' and removed the garbage');
   });
 };
 
-let winIcecream = function(p) {
+let winIcecream = function(message) {
   return new Promise(function(resolve, reject){
-    resolve('Won Icecream');
+    resolve(message + ' and was rewarded with ice cream.');
   });
 };
 
@@ -31,15 +31,12 @@ let winIcecream = function(p) {
 // the second .then() method runs on the successful
 // execution of the removeGarbage promise resolve method
 // and that returns the winIcecream promise.
-cleanRoom().then(function(fromResolve) {
-  console.log(fromResolve);
-  return removeGarbage();
+cleanRoom().then(function(result) {
+  return removeGarbage(result);
 })
-.then(function(fromResolve) {
-  console.log(fromResolve);
-  return winIcecream();
+.then(function(result) {
+  return winIcecream(result);
 })
-.then(function(fromResolve){
-  console.log(fromResolve);
-  console.log('Finished');
+.then(function(result){
+  console.log('Done! I ' + result);
 });
