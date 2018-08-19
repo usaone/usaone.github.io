@@ -53,3 +53,16 @@ Promise.race([cleanRoom(), removeGarbage(), winIcecream()])
 .then(function() {
   console.log('One done! Two more to go.');
 });
+
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(function(response) { 
+    return response.json();
+  })
+  .then(function(json) {
+    console.log(json);
+    let str = JSON.stringify(json);
+    console.log('str', str);
+    let temp = json;
+    console.log('temp', temp);
+  });
+  
